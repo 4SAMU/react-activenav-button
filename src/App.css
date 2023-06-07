@@ -1,38 +1,348 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: fixed;
+  overflow: hidden;
+  height: 80px;
+  width: 100vw;
+
+  left: 0px;
+  top: 0px;
+
+  background: #1c1b2d;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+  z-index: 10;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homeBtn {
+  position: absolute;
+  right: 400px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.active {
+  background-color: #04aa6d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.appName {
+  position: absolute;
+  width: max-content;
+  height: 25px;
+  left: 300px;
+  top: 20px;
+
+  font-family: "Good Times";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+
+  /* identical to box height */
+  text-align: center;
+
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutButton {
+  position: absolute;
+  right: 270px;
+}
+
+.homepageText {
+  position: absolute;
+  width: 478px;
+  height: 64px;
+  left: 300px;
+  top: 200px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+
+  color: #1c1b2d;
+}
+
+.homepageText_bold {
+  position: absolute;
+  width: 628px;
+  height: 126px;
+  left: 300px;
+  top: 300px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 63px;
+
+  color: #1c1b2d;
+}
+
+.light {
+  position: absolute;
+  width: 1032px;
+  height: 615.23px;
+  left: 426px;
+  top: 301px;
+
+  background: linear-gradient(
+      0deg,
+      rgba(250, 141, 81, 0.3),
+      rgba(250, 141, 81, 0.3)
+    ),
+    linear-gradient(
+      139.44deg,
+      rgba(255, 255, 255, 0.2) 9%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  filter: blur(144px);
+  backdrop-filter: blur(21px);
+
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
+}
+.button {
+  position: absolute;
+  width: 210px;
+  height: 57px;
+  left: 300px;
+  top: 450px;
+
+  background: #1c1b2d;
+  border-radius: 50px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ffffff;
+  border: 0ch;
+  cursor: pointer;
+}
+
+.BrowCceramic {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  right: 100px;
+  top: 150px;
+}
+.artpage {
+  position: absolute;
+  width: 100vw;
+  height: 1000px;
+  left: 0px;
+  top: 600px;
+
+  background: linear-gradient(106.42deg, #1c1b2d -0.82%, #18162f 100%);
+}
+
+.artpage_header {
+  position: absolute;
+  width: max-content;
+  height: 63px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 130px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.artpage_greybox {
+  position: absolute;
+  width: 800px;
+  height: 200px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 200px;
+
+  background: #868686;
+  /* opacity: 0.2; */
+}
+.artpage_greybox_h {
+  position: relative;
+  width: max-content;
+  height: 45px;
+  left: 30px;
+  top: 20px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  /* line-height: 44px; */
+
+  color: #f3eded;
+}
+.artpage_greybox_h-spantext {
+  position: absolute;
+  width: 650px;
+  /* height: ; */
+  left: 30px;
+  top: 50px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  /* line-height: 18px; */
+
+  color: #bfbfbf;
+}
+
+.videoHere {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 500px;
+
+  background: #d9d9d9;
+}
+
+.ceramicDenPage {
+  position: absolute;
+  width: 100vw;
+  height: 1300px;
+  left: 0px;
+  top: 1000px;
+
+  background: linear-gradient(106.42deg, #e2e7e6 -0.82%, #ece5e6 100%);
+}
+
+.ceramicDenPage_header {
+  position: absolute;
+  width: max-content;
+  height: 45px;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  top: 130px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  /* line-height: 63px; */
+
+  /* identical to box height */
+
+  color: #1c1b2d;
+}
+
+.ceramicDenPage_header_h1 {
+  position: absolute;
+  width: 588px;
+  height: 40px;
+  left: 300px;
+  top: 190px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  /* line-height: 40px; */
+
+  /* identical to box height */
+
+  color: #1c1b2d;
+}
+.image1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 300px;
+  top: 300px;
+}
+.image2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 700px;
+  top: 300px;
+}
+
+.image3 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 300px;
+  top: 600px;
+}
+.image4 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 600px;
+  top: 600px;
+}
+.image5 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 900px;
+  top: 600px;
+}
+
+.quote {
+  position: absolute;
+  width: 700px;
+  left: 300px;
+  top: 900px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 27px;
+  color: #1c1b2d;
+}
+
+.largeImage {
+  position: absolute;
+  width: 100vw;
+  height: 500px;
+  left: 0px;
+  top: 1000px;
+}
+
+.footer {
+  position: absolute;
+  width: 100vw;
+  height: 90px;
+  left: 0px;
+  top: 1600px;
+
+  background: linear-gradient(106.42deg, #1c1b2d -0.82%, #18162f 100%);
+}
+html {
+  scroll-behavior: smooth;
 }
