@@ -1,40 +1,40 @@
 {
-  "name": "html-to-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-activenav-button": "^1.0.1",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "react-activenav-button",
+  "version": "1.0.1",
+  "description": "react-activenav-button is a custom React hook that provides a simple way to manage and update the active link/button state in a navigation component.",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node .",
+    "build": "babel src --out-dir lib"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4SAMU/react-activenav-button.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+  "keywords": [
+    "Link",
+    "active nav",
+    "react"
+  ],
+  "author": "SA MU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4SAMU/react-activenav-button/issues"
+  },
+  "homepage": "https://github.com/4SAMU/react-activenav-button#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   }
 }

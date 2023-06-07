@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+## react-active-nav-button
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`react-active-nav-button` is a custom React hook that provides a simple way to manage and update the active link/button state in a navigation component.
 
-## Available Scripts
+### Installation
 
-In the project directory, you can run:
+You can install the package using npm:
 
-### `npm start`
+```shell
+npm install react-activenav-button
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+or with yarn:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```shell
+yarn add react-activenav-button
+```
 
-### `npm test`
+### Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To use `react-activenav-button`, follow these steps:
 
-### `npm run build`
+-Import the hook into your React component:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```js
+import ActiveNavButton from "react-activenav-button";
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-Initialize the hook by passing the initial active link/button value:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+const { activeLink, handleButtonClick } = ActiveNavButton("home");
+```
 
-### `npm run eject`
+The `activeLink` variable holds the current active link/button value, and `handleButtonClick` is a function that you can attach to your link/button components to update the active state.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-Attach the `handleButtonClick` function to your link/button components:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+<button onClick={handleButtonClick('home')}>Home</button>
+<button onClick={handleButtonClick('about')}>About</button>
+<button onClick={handleButtonClick('services')}>Services</button>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In this example, the active state will be updated based on the link/button that is clicked.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-You can access the `activeLink` value to apply different styles or perform additional logic based on the active link/button:
 
-## Learn More
+```js
+<button className={activeLink === 'home' ? 'active' : ''}>Home</button>
+<button className={activeLink === 'about' ? 'active' : ''}>About</button>
+<button className={activeLink === 'services' ? 'active' : ''}>Services</button>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+By comparing the `activeLink` value with each link/button, you can conditionally apply the `active` class or any other styling as needed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Example
 
-### Code Splitting
+Here's a simple example demonstrating the usage of `react-activenav-button`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```js
+import React from "react";
+import ActiveNavButton from "react-activenav-button";
 
-### Analyzing the Bundle Size
+function Navigation() {
+  const { activeLink, handleButtonClick } = ActiveNavButton("home");
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  return (
+    <nav>
+      <button
+        onClick={handleButtonClick("home")}
+        className={activeLink === "home" ? "active" : ""}
+      >
+        Home
+      </button>
+      <button
+        onClick={handleButtonClick("about")}
+        className={activeLink === "about" ? "active" : ""}
+      >
+        About
+      </button>
+      <button
+        onClick={handleButtonClick("services")}
+        className={activeLink === "services" ? "active" : ""}
+      >
+        Services
+      </button>
+    </nav>
+  );
+}
 
-### Making a Progressive Web App
+export default Navigation;
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+In this example, the active link state is managed using the `ActiveNavButton` hook, and the active link/button is visually indicated by applying the `active` class.
 
-### Advanced Configuration
+### License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the MIT License.<br/>
 
-### Deployment
+Feel free to modify and customize the code according to your needs.<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you encounter any issues or have any suggestions, please open an [issue](https://github.com/4SAMU/react-activenav-button/issues) on the GitHub repository.<br/>
 
-### `npm run build` fails to minify
+### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! If you have any improvements or additional features, feel free to submit a pull request.
+
+### Author
+
+4SAMU - [GitHub](https://github.com/4SAMU) - [portfolio](https://samuel-nzomo.vercel.app/)
+
+If you have any questions or need further assistance, please feel free to contact me.
+
+Enjoy using `react-activenav-button` in your projects!
