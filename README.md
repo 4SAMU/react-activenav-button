@@ -1,6 +1,6 @@
-## react-active-nav-button
+## react-activenav-button
 
-`react-active-nav-button` is a custom React hook that provides a simple way to manage and update the active link/button state in a navigation component.
+`react-activenav-button` is a custom React hook that provides a simple way to manage and update the active link/button state in a navigation component.
 
 ### Installation
 
