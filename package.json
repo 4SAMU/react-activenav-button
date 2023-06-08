@@ -1,8 +1,9 @@
 {
   "name": "react-activenav-button",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react-activenav-button is a custom React hook that provides a simple way to manage and update the active link/button state in a navigation component.",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "start": "node .",
     "build": "babel src --out-dir lib"
